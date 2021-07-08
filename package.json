@@ -1,6 +1,6 @@
 {
-  "name": "lerna-codebase",
   "private": true,
+  "name": "monorepo-micro",
   "workspaces": [
     "packages/*"
   ],
