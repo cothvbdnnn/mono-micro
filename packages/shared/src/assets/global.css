@@ -1,0 +1,10 @@
+:root {
+  --global-width: 100%;
+}
+
+body {
+  font-family: BizflyLato;
+  font-size: 1.6rem;
+  background-color: #efefef;
+  margin: 0;
+}

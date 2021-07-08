@@ -24,5 +24,14 @@ module.exports = (webpackConfigEnv, argv) => {
         },
       }),
     ],
+    externals: [
+      "single-spa",
+      "vue",
+      "vue-router",
+      "vuex",
+      "axios",
+      "js-cookie",
+      /^@bizfly\/.+$/,
+    ],
   });
 };
