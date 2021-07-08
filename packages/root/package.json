@@ -1,6 +1,6 @@
 {
   "name": "@bizfly/root-config",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "scripts": {
     "start": "webpack serve --port 9000 --env isLocal",
     "lint": "eslint src --ext js",
