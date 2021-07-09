@@ -8,16 +8,19 @@
   <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">
   <meta name="importmap-type" content="systemjs-importmap" />
+  <script src="<%= process.env.VUE_APP_CONFIG_ENV %>"></script>
+  <script src="<%= process.env.UMD %>"></script>
   <script type="systemjs-importmap">
     {
       "imports": {
         "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
-        "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js",
+        "vue": "<%= process.env.VUE_APP_CONFIG_ENV %>",
         "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.1.6/dist/vue-router.min.js",
         "vuex": "https://cdn.jsdelivr.net/npm/vuex/dist/vuex.min.js",
-        "vue-loader": "https://cdn.jsdelivr.net/npm/vue-loader@16.3.0/dist/index.min.js",
         "axios": "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js",
-        "js-cookie": "https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"
+        "js-cookie": "https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js",
+        "i18n": "https://cdnjs.cloudflare.com/ajax/libs/vue-i18n/9.2.0-alpha.5/vue-i18n.cjs.min.js",
+        "moment": "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
       }
     }
   </script>

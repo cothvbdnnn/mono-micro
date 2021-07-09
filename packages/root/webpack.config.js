@@ -1,6 +1,7 @@
 const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = (webpackConfigEnv, argv) => {
   const orgName = "bizfly";
@@ -23,6 +24,7 @@ module.exports = (webpackConfigEnv, argv) => {
           orgName,
         },
       }),
+      new Dotenv(),
     ],
     externals: [
       "single-spa",
@@ -31,6 +33,8 @@ module.exports = (webpackConfigEnv, argv) => {
       "vuex",
       "axios",
       "js-cookie",
+      "i18n",
+      "moment",
       /^@bizfly\/.+$/,
     ],
   });
