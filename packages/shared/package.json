@@ -1,5 +1,6 @@
 {
   "name": "@bizfly/shared",
+  "private": true,
   "scripts": {
     "start": "webpack serve --port 8500",
     "start:standalone": "webpack serve --env standalone",
