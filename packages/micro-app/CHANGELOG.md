@@ -5,12 +5,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.0.4 (2021-07-10)
 
-**Note:** Version bump only for package @bizfly/root-config
-
-
-
-
-
-## 1.0.3 (2021-07-08)
-
-**Note:** Version bump only for package @bizfly/root-config
+**Note:** Version bump only for package @bizfly/micro-app
