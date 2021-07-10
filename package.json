@@ -1,16 +1,23 @@
 {
   "private": true,
   "name": "monorepo-micro",
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": ["packages/*"],
+    "nohoist": []
+  },
   "scripts": {
     "test": "lerna run test",
     "new-version": "lerna version --conventional-commits --yes",
-    "diff": "lerna diff"
+    "diff": "lerna diff",
+    "root": "yarn workspace @bizfly/root-config start",
+    "shared": "cd packages/shared/ && yarn start",
+    "micro-app": "yarn workspace @bizfly/micro-app serve",
+    "start": "concurrently --kill-others-on-fail \"yarn root\" \"yarn shared\" \"yarn micro-app\""
   },
   "devDependencies": {
     "lerna": "^4.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "concurrently": "^6.2.0"
+  }
 }
