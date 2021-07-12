@@ -3,14 +3,16 @@
   "name": "monorepo-micro",
   "workspaces": {
     "packages": ["packages/*"],
-    "nohoist": []
+    "nohoist": [
+      "**"
+    ]
   },
   "scripts": {
     "test": "lerna run test",
     "new-version": "lerna version --conventional-commits --yes",
     "diff": "lerna diff",
-    "root": "cd ./packages/root/ && yarn start",
-    "shared": "cd ./packages/shared/ && yarn start",
+    "root": "yarn workspace @bizfly/root-config start",
+    "shared": "yarn workspace @bizfly/shared start",
     "micro-app": "yarn workspace @bizfly/micro-app serve",
     "start": "concurrently --kill-others-on-fail \"yarn root\" \"yarn shared\" \"yarn micro-app\""
   },
